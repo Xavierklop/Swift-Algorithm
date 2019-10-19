@@ -1,3 +1,6 @@
+
+import Foundation
+
 // Linked List
 
 class Node {
@@ -18,7 +21,7 @@ class LinkedList {
     
     func append(_ node: Node) {
         guard head != nil else {
-            head = head
+            head = node
             return
         }
         
@@ -29,7 +32,7 @@ class LinkedList {
         current?.next = node
     }
     
-    fun getNode(atPosition position: Int) -> Node? {
+    func getNode(atPosition position: Int) -> Node? {
         guard position > 0 else {
            return nil
         }
@@ -52,8 +55,8 @@ class LinkedList {
             return
         }
         
-        current = head
-        counter = 1
+        var current = head
+        var counter = 1
         
         if position == 1 {
             node.next = head
@@ -81,7 +84,7 @@ class LinkedList {
         
         if current?.value == value {
             if previous != nil {
-                previous.next = current?.next
+                previous?.next = current?.next
             } else {
                 head = current?.next
             }

@@ -1,3 +1,6 @@
+
+import Foundation
+
 class Stack {
     var linkedList: LinkedList
     
@@ -19,6 +22,16 @@ class Stack {
 }
 
 class Node {
+    
+    var value: Int
+    var next: Node?
+    
+    init(value: Int) {
+        self.value = value
+    }
+}
+
+class LinkedList {
     var head: Node?
     
     init(head: Node?) {
@@ -39,7 +52,7 @@ class Node {
     }
     
     func insertNode(_ node: Node, at position: Int) {
-        guard position > 0 {
+        guard position > 0 else {
             return
         }
         
@@ -51,7 +64,7 @@ class Node {
             head = node
         } else if position > 1 {
             while current != nil && counter < position {
-                if counter = position - 1 {
+                if counter == position - 1 {
                     node.next = current?.next
                     current?.next = node
                 }

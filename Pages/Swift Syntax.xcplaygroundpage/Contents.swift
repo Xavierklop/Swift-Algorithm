@@ -1,3 +1,6 @@
+
+import Foundation
+
 ////Comments
 //// This is a one-line Swift comment.
 //

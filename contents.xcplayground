@@ -4,5 +4,6 @@
         <page name='Swift Syntax'/>
         <page name='Linked List'/>
         <page name='Stack'/>
+        <page name='Queue'/>
     </pages>
 </playground>
